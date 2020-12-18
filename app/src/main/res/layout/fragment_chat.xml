@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.getstream.sdk.chat.view.MessageListView
+        android:id="@+id/message_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1c1c1c"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:visibility="gone"
+        app:streamShowDeliveredState="false"
+        app:layout_constraintBottom_toTopOf="@id/message_input"
+        app:layout_constraintEnd_toEndOf="@id/message_list_placeholder"
+        app:layout_constraintStart_toStartOf="@id/message_list_placeholder"
+        app:layout_constraintTop_toTopOf="@id/message_list_placeholder"
+        app:streamDefaultScrollButtonEnabled="false"
+        app:streamMessageBubbleDrawableMine="@android:color/transparent"
+        app:streamMessageBubbleDrawableTheirs="@android:color/transparent"
+        app:streamDeleteMessageActionEnabled="false"
+        app:streamEditMessageActionEnabled="false"
+        app:streamMessageTextColorMine="#EEE"
+        app:streamMessageTextColorTheirs="#EEE"
+        app:streamNewMessagesBehaviour="scroll_to_bottom"
+        app:streamShowReadState="false" />
+
+    <com.getstream.sdk.chat.view.messageinput.MessageInputView
+        android:id="@+id/message_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#1c1c1c"
+        android:visibility="gone"
+        app:streamShowSendAlsoToChannelCheckbox="false"
+        app:layout_constraintBottom_toBottomOf="@id/message_list_placeholder"
+        app:layout_constraintEnd_toEndOf="@id/message_list_placeholder"
+        app:layout_constraintStart_toStartOf="@id/message_list_placeholder"
+        app:streamShowAttachmentButton="false" />
+
+    <View
+        android:id="@+id/message_list_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/message_list_blurred"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#222222"
+        android:scaleType="fitEnd"
+        android:src="@drawable/blurred_chat_placeholder"
+        app:layout_constraintBottom_toBottomOf="@id/message_list_placeholder"
+        app:layout_constraintEnd_toEndOf="@id/message_list_placeholder"
+        app:layout_constraintStart_toStartOf="@id/message_list_placeholder"
+        app:layout_constraintTop_toTopOf="@id/message_list_placeholder" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/join_chat"
+        style="@style/MaterialTangerineUnelevatedButtonNoRoundedCorners"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:text="Join the chat"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/message_list_placeholder"
+        app:layout_constraintEnd_toEndOf="@id/message_list_placeholder"
+        app:layout_constraintStart_toStartOf="@id/message_list_placeholder"
+        app:layout_constraintTop_toTopOf="@id/message_list_placeholder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
