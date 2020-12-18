@@ -56,7 +56,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 
-    implementation 'io.getstream:stream-chat-android:4.4.7'
+    implementation 'io.getstream:stream-chat-android:4.4.9'
     implementation "io.reactivex.rxjava2:rxkotlin:2.4.0"
     api 'io.reactivex.rxjava2:rxandroid:2.1.1'
     api 'io.reactivex.rxjava2:rxjava:2.2.10'

@@ -32,7 +32,7 @@ class ChatFragment : Fragment() {
     // TODO: insert your own user token
     private val chatUserToken: String = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoic3VtbWVyLWJyb29rLTIifQ.CzyOx8kgrc61qVbzWvhV1WD3KPEo5ZFZH-326hIdKz0"
 
-    private val chatChannelId: String = "sandbox2"
+    private val chatChannelId: String = "sandbox5"
     private val chatChannelType = "livestream"
 
     override fun onCreateView(

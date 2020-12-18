@@ -37,10 +37,8 @@ internal class LivePlayerViewModel : ViewModel() {
 
             ChatClient.instance().setUser(user, userToken, object : InitConnectionListener() {
                 override fun onSuccess(data: ConnectionData) {
-                    viewModelScope.launch {
-                        delay(100)
+
                         onStreamUserConnectListener?.onSuccess()
-                    }
                 }
 
                 override fun onError(error: ChatError) {
