@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MaterialTangerineUnelevatedButtonNoRoundedCorners" parent="@style/Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="backgroundTint">#FFB000</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="rippleColor">#CD000000</item>
+    </style>
+
+
+</resources>
